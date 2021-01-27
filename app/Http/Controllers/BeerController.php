@@ -40,11 +40,15 @@ class BeerController extends Controller
      */
     public function store(Request $request)
     {
-       /*  $data = $request->all();
-        $request->validate($this->ruleValidation());
-
+        $data = $request->all();
         $data['slug']= Str::slug($data['title'], '-');
-        dump($data);
+        
+        
+        $request->validate($this->ruleValidation());
+        
+
+        
+    
 
         if(!empty($data['path_img'])){
             $data['path_img'] = Storage::disk('public')->put('images' , $data['path_img']);
@@ -61,8 +65,8 @@ class BeerController extends Controller
         } else{
             // Choose new route
             return redirect()->route('homepage');
-        } */
-        $data = $request->all();
+        } 
+       /*  $data = $request->all();
         $request->validate($this->ruleValidation());
 
 
@@ -74,7 +78,7 @@ class BeerController extends Controller
 
        if($saved){
            return redirect()->route('beers.show', $beer->id);
-       }
+       } */
 
     }
 
@@ -84,13 +88,13 @@ class BeerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Beer $beer)
+    public function show($slug)
     {
-        /* $beer = Beer::where('slug', $slug)->first();
+        $beer = Beer::where('slug', $slug)->first();
         
-        return view('beers.show', compact('beer')); */
-
         return view('beers.show', compact('beer'));
+
+        // return view('beers.show', compact('beer'));
     }
 
     /**
@@ -129,7 +133,7 @@ class BeerController extends Controller
     private function ruleValidation(){
         return [
             'title' => 'required',
-            'type' => 'required',
+            'type' => '',
             'origin' => 'required',
             'description' => 'required',
             'price' => 'required',

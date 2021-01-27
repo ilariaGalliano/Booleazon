@@ -5,6 +5,20 @@
 <div class="container">
     <h1>Insert new beer</h1>
         
+    @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>
+                    {{$error}}
+                </li>
+            @endforeach
+        </ul>
+    </div>
+    @endif
+
+
+
         <form action="{{ route('beers.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('POST')
@@ -27,6 +41,11 @@
             <div class="form-group">
                 <label for="origin">Origin</label>
                 <input class="form-control" type="text" name="origin" id="origin" value="{{ old('origin') }}">
+            </div>
+
+            <div class="form-group">
+                <label for="type">Type</label>
+                <input class="form-control" type="text" name="type" id="type" value="{{ old('type') }}">
             </div>
 
             <div class="form-group">
