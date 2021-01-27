@@ -16,4 +16,12 @@
                 {{-- Rotta About --}}
               <a class="nav-link" href="{{route('about')}}">About</a>
             </li>
+            <li class="nav-item active">
+              {{-- Rotta About --}}
+            <a class="nav-link" href="{{route('beers.index')}}">Info</a>
+          </li>
+          <li class="nav-item active">
+            {{-- Rotta About --}}
+          <a class="nav-link" href="{{route('beers.create')}}">Area riservata</a>
+        </li>
 </header>
