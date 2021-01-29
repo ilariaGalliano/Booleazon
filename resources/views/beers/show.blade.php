@@ -5,6 +5,11 @@
 <div class="container">
     <h1>{{ $beer->title }}</h1>
     <p>{{ $beer->description}}</p>
+    @if (!empty($beer->path_img))
+        <img src="{{asset('storage/' . $beer->path_img)}}" alt="{{$beer->title}}">
+    @else
+        <img src="{{asset('img/no-img.png')}}" alt="{{$beer->title}}">
+    @endif
     
    
 
