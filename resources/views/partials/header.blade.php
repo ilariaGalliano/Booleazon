@@ -18,10 +18,10 @@
             </li>
             <li class="nav-item active">
               {{-- Rotta About --}}
-            <a class="nav-link" href="{{route('beers.index')}}">Info</a>
+            <a class="nav-link" href="{{route('beers.index')}}">Shop</a>
           </li>
           <li class="nav-item active">
             {{-- Rotta About --}}
-          <a class="nav-link" href="{{route('beers.create')}}">Area riservata</a>
+          <a class="nav-link" href="{{route('beers.create')}}">Crea</a>
         </li>
 </header>
