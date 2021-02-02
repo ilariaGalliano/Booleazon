@@ -6,17 +6,14 @@
     <h1>{{ $beer->title }}</h1>
     <p>{{ $beer->description}}</p>
     @if (!empty($beer->path_img))
-        <img src="{{asset('storage/' . $beer->path_img)}}" alt="{{$beer->title}}">
+        <img class="mb-3" width="400" src="{{asset('storage/' . $beer->path_img)}}" alt="{{$beer->title}}">
     @else
-        <img src="{{asset('img/no-img.png')}}" alt="{{$beer->title}}">
+        <img class="mb-3" width="400" src="{{asset('img/no-img.png')}}" alt="{{$beer->title}}">
     @endif
     
-   
 
-    <div class="form-group ">
-        <a  href="{{route('beers.edit', $beer->slug)}}">
-        
-            </a>
+    <div class="form-group">
+        <a  href="{{route('beers.edit', $beer->slug)}}"></a>
         <input class="btn btn-secondary" type="submit" value="Update">
     </div>
 
