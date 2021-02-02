@@ -13,7 +13,7 @@
                <h3>{{$beer->origin}}</h3>
                <h6>Available: {{$beer->created_at}}</h6>
                <a href="{{route('beers.show', $beer->slug)}}">Show more</a>
-               <div class="form-group mt-2">
+               <div class="form-group d-flex mt-2">
                     <a  href="{{route('beers.edit', $beer->slug)}}"></a>
                     <input class="btn btn-secondary" type="submit" value="Update">
                 </div>
