@@ -177,7 +177,7 @@ class BeerController extends Controller
             'origin' => 'required',
             'description' => 'required',
             'price' => 'required',
-            'path_img' => 'mimes:jpg,jpeg,png,bmp',
+            'path_img' => 'mimes:jpg,jpeg,png,bmp,psd',
         ];
     }
 }

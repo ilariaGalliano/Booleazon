@@ -2,20 +2,24 @@
 
 @section('content')
     <div class="text-center">
-        <h1>
-            Birra Ricchi & Poveri HOME
-        </h1>
+
+       <img class="mb-3" src="{{ asset('img/logo.jpg') }}" alt="birra">
+
         
+    <div class="container" style="background-image: url('/docs/4.0/assets/brand/bootstrap-solid.svg')";>
 
-        <img class="mt-3 mb-4" width="1410" style="height: 800px;" src="https://www.foodweb.it/wp-content/uploads/2020/02/Heallo.jpg" alt="">
-
-    <div class="container">
-
-        <div class="hero">
+        <div class="hero row">
             @foreach ($beers as $beer)
-                 <h1 class="text-center">{{ $beer->title }}</h1>
-                 <img width="400" src="{{ asset('storage/' . $beer->path_img) }}" alt="{{ $beer->title }}">
-    
+
+            <div class="col-sm mb-4">
+                
+                <a class="text-decoration-none" href="{{route('beers.show', $beer->slug)}}">
+                    <img class="mb-2 mt-2" width="300" height="430" src="{{ asset('storage/' . $beer->path_img) }}" alt="{{ $beer->title }}">
+                    <h3 style="color: #343a40;" class="text-center mb-2">{{ $beer->title }}</h3>
+                    Visualizza prodotti
+                </a>
+            </div>
+                
             @endforeach
         </div>
         

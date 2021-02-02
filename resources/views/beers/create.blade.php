@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="container">
-    <h1>Insert new beer</h1>
+    <h1 class="pt-3 pb-3 text-center">Insert new beer</h1>
         
     @if ($errors->any())
     <div class="alert alert-danger">
@@ -53,11 +53,12 @@
                 <input class="form-control" type="file" name="path_img" id="path_img"  accept="image/*">
             </div>
 
-            <div class="form-group">
-                <input class="btn btn-dark" type="submit" value="Add">
+            <div class="form-group d-flex justify-content-center pt-3 ">
+                <input class="btn btn-warning" type="submit" value="Add">
             </div>
 
 
+            <a href="{{route('beers.index')}}">Shop area riservata</a>
 
 
         </form>

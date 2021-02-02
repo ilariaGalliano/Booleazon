@@ -13,9 +13,21 @@
                <h3>{{$beer->origin}}</h3>
                <h6>Available: {{$beer->created_at}}</h6>
                <a href="{{route('beers.show', $beer->slug)}}">Show more</a>
+               <div class="form-group mt-2">
+                    <a  href="{{route('beers.edit', $beer->slug)}}"></a>
+                    <input class="btn btn-secondary" type="submit" value="Update">
+                </div>
+               <form  action="{{route('beers.destroy', $beer->id)}}" method="POST">
+                @csrf
+                @method("DELETE")
+                
+                    <input class="btn btn-secondary" type="submit" value="Delete" >
+                </form>
             </li>
         @endforeach
     </ul>
+
+    
         
 </div>
 
