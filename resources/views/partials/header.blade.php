@@ -22,7 +22,7 @@
             <a class="nav-link" href="{{route('beers.index')}}">Shop</a>
           </li> rotta shop- area riservata --}}
           <li class="nav-item active">
-            {{-- Rotta About --}}
-          <a class="nav-link" href="{{route('beers.create')}}">Area riservata</a>
+            {{-- Rotta Area riservata --}}
+            <a class="nav-link" href="{{route('beers.create')}}">Area riservata</a>
         </li>
 </header>

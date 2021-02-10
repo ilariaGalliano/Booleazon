@@ -17,6 +17,7 @@
                     <a  href="{{route('beers.edit', $beer->slug)}}"></a>
                     <input class="btn btn-secondary" type="submit" value="Update">
                 </div>
+                
                <form  action="{{route('beers.destroy', $beer->id)}}" method="POST">
                 @csrf
                 @method("DELETE")

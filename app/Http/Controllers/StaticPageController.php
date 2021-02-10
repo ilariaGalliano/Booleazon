@@ -7,13 +7,17 @@ use App\Beer;
 
 class StaticPageController extends Controller
 {
-    /**HOMEPAGE */
+    /**
+     * HOMEPAGE 
+     */
     public function home() {
         $beers = Beer::all();
         return view('home', compact('beers'));
     }
 
-    /**ABOUT */
+    /**
+     * ABOUT 
+     */
     public function about() {
         return view('about');
     }

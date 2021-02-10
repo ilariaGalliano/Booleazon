@@ -3,6 +3,6 @@
 
 @section('content')
     <h1>
-        Oooops something gone wrong
+        Oooops something's gone wrong :(
     </h1>
 @endsection

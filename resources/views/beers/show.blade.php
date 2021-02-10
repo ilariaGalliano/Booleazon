@@ -12,10 +12,10 @@
         <img class="mb-3" width="400" src="{{asset('img/no-img.png')}}" alt="{{$beer->title}}">
     @endif
 
-    <p>Descrizione: {{ $beer->description}}</p>
-    <p>Tipologia: {{ $beer->type}}</p>
-    <p>Origine: {{ $beer->origin}}</p>
-    <p>Prezzo: {{ $beer->price}}€</p>
+        <p>Descrizione: {{ $beer->description}}</p>
+        <p>Tipologia: {{ $beer->type}}</p>
+        <p>Origine: {{ $beer->origin}}</p>
+        <p>Prezzo: {{ $beer->price}}€</p>
     
 
   {{--   <div class="form-group">

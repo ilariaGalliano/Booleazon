@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
-    <div class="text-center">
+ <div class="text-center">
 
        <img class="mb-3" src="{{ asset('img/logo.jpg') }}" alt="birra">
 
@@ -25,5 +25,5 @@
         
     </div>
 
-    </div>
+ </div>
 @endsection
